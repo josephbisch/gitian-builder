@@ -1,3 +1,7 @@
 {
-	"cmd": "./lambci-build.sh"
+	"cmd": "./lambci-build.sh",
+	"docker": {
+		"cluster": "lambci-ecs-Cluster-GPCSDGMFFFQ7",
+		"task": "lambci-ecs-BuildTask-17YWDMVDNJVNA"
+	}
 }
