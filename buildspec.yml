@@ -8,6 +8,6 @@ phases:
       - echo test > artifact
       - echo Build finished on `date`
 
-    artifacts:
-      files:
-        - artifact
+artifacts:
+  files:
+    - artifact
