@@ -7,7 +7,7 @@ phases:
       - DEBIAN_FRONTEND=noninteractive apt-get -y update
       - DEBIAN_FRONTEND=noninteractive apt-get -y install git ruby
       - git clone https://github.com/bitcoin/bitcoin.git
-      - bash ./bitcoin/contrib/gitian-build.sh --verify --build --os l --kvm --setup --no-commit signer v0.14.2
+      - bash ./bitcoin/contrib/gitian-build.sh --verify --build --os l --kvm --setup --no-commit signer 0.14.2
       - echo Build finished on `date`
 
 artifacts:
