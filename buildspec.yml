@@ -5,12 +5,12 @@ phases:
     commands:
       - echo Build started on `date`
       - DEBIAN_FRONTEND=noninteractive apt-get -y update
-      - DEBIAN_FRONTEND=noninteractive apt-get -y install git
+      - DEBIAN_FRONTEND=noninteractive apt-get -y install git ruby
       - git clone https://github.com/bitcoin/bitcoin.git
       - bash ./bitcoin/contrib/gitian-build.sh --verify --build --os l --kvm --setup --no-commit signer v0.14.2
-      - echo test > artifact
       - echo Build finished on `date`
 
 artifacts:
   files:
-    - artifact
+    - gitian-builder/build/out/*
+  discard-paths: yes
